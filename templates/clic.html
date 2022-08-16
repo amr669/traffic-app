@@ -1,0 +1,44 @@
+{% extends 'b.html' %}
+{% load static %}
+
+
+
+{% block breadcrumb %}
+<li class="breadcrumb-item " ><a href = "{% url 'new_car2' %}" > Back</a></li>
+<li class="breadcrumb-item active">car number for testing</li>
+
+{%endblock%}
+{% block stylesheet %}
+        <style>
+            .vvmastheadd1{
+                margin-top: 10%;
+                margin-left: 30%;
+            }
+            .footer{
+                margin-top :13%;
+            }
+        </style>
+<link href="{% static 'css/s.css' %}" rel="stylesheet" />
+{% endblock stylesheet %}
+{% block head %}
+
+<header class="vvmastheadd1">
+
+
+    <div class="vcontainerrr">
+        
+
+        <div class="masthead-subheading">مرحبا بكم</div>
+        <div class="masthead-heading text-uppercase">ادارة المخالفات المروريه</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="{% url 'new_car2' %}">back</a>
+                        <p></p>
+
+                        
+    </div>
+</header>
+{% endblock head %}
+
+{% block content %}
+
+
+{% endblock content %}

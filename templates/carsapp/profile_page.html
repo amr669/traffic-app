@@ -1,0 +1,98 @@
+{% extends 'b.html' %}
+{% load static %}
+{%block title%}profile_page{%endblock%}
+
+
+{% block stylesheet %}
+<link href="{% static 'css/s.css' %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'css/account.css' %}">
+
+
+{% endblock %}
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+<li class="breadcrumb-item active">New test car</li>
+{% endblock breadcrumb %}
+
+{% block head %}
+
+<header class="masthead">
+    <div class="container">
+        
+
+        <div class="masthead-subheading">مرحبا بكم</div>
+        <div class="masthead-heading text-uppercase">ادارة المخالفات المروريه</div>
+        
+        <div class="container pg-3">
+            <h2>my cars page</h2>
+            {% if messages %} 
+                {% for ms in messages %}
+                <p>
+                    {{ms}}
+                    <a href="{% url 'new_car' u_n=user.id %}">add new car</a>
+                </p>
+                {% endfor %} 
+        {% endif %} 
+            
+            <div class="table-responsive">          
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>السيارة</th>
+                        <th>المخالفات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for car in myCars %}
+                    <tr>
+                        <td>{{car.row_num}}</td>
+                        <td>{{car.car_no}}</td>
+                        <td>                 
+                    {%if car.car_vals %}
+                        <table class="table">
+                            <tr>
+                                <td>num</td>
+                                <td>cost</td>
+                                <td>الجريمة</td>
+                                <td>Pay</td>
+                            </tr>
+                        {% for val in car.car_vals %}
+                            <tr>
+                                <td> {{val.V_number}}</td>
+                                <td> {{val.cost}}</td>
+                                <td> {{val.desc}}</td>
+                                <td> <a href="{% url 'new_pymnt' val.V_number %}"> ادفع الان</a></td>
+                            </tr>
+                        {% endfor %}
+                        </table>
+                    {%else%}
+                        <small>No Posts</small>
+                    {%endif%}
+                        </td>   
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            </div>
+    
+    
+      
+    </div>
+
+</header>
+{% endblock head %}
+
+<li class="breadcrumb-item">dashboard</li>
+    <li class="breadcrumb-item active">{{user.username}}</li>
+
+{% block content %}
+
+        
+        {%endblock content %}
+        {% block js %}
+        <script src="{% static '1jquery.min.js'%}"></script>
+        <script src="{% static '1bootstrap.min.js'%}"></script>
+        
+        {% endblock js %}

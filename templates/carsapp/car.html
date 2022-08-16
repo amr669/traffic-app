@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{%block title%} car  {%endblock%}
+
+{% block breadcrumb %}
+    <li class="breadcrumb-item active"></li>
+{%endblock%}
+
+{% block content %}
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th>cars</th>
+        <th>violations</th>
+        <th>Topic</th>
+        <th>Last Post</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+        <td><a >dd{{uuu.car}}</a>
+        <small class="text-muted d-block">C_number{{board.username}}</small>
+        </td>
+        <td>{{uu.}}</td>
+        <td>kk</td>
+        <td>
+
+
+            <small>No Posts</small>
+
+
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+{%endblock%}

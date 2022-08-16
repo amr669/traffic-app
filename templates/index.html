@@ -1,0 +1,176 @@
+{% extends 'b.html' %}
+{% load static %}
+
+{% block body %}
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">خدماتنا</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">الخدمات المرورية</h4>
+                        <p class="text-muted">نساعد على التحسين للحركة المرورية ونطورها بشكل مستمر للصورة الأحسن  </p>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">انواع المخالفات المرورية </h4>
+                        <p class="text-muted">يمكنك التعرف على جميع المخالفات المرورية  </p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">حماية معلوماتي</h4>
+                        <p class="text-muted">يتم حماية معلومات الراكب والحد من الأخطار </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">الخدمات السريعة</h2>
+                    <h3 class="section-subheading text-muted">يمكنك معرفة المخالفات الذي لديك وتسديد ما عليك عبر موقعنا </h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="{% url 'profile' %}">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/1.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">خدمات رقمية </div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4">
+
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="{% url 'profile' %}">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/3.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">سيارتي</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+
+
+
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="{% url 'profile' %}">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/img/portfolio/5.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading"></div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">من نحن</h2>
+                    <h3 class="section-subheading text-muted">نظام ادارة المرور</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/logos/logo.png' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">عنا</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">هي احدى المكونات التنظيمية التابعة لوزارة الداخلية وتؤدي مهامها وفقاً لقانون المرور النافذ رقم 46 لسنة 1991م وتعديلاته واللائحة التنفيذية وتمارس مهام اختصاصات نوعية وتقدم خدمات متنوعة للمواطنين ومستخدمي الطريق عبر فروعها في صنعاء يديرها حالياً العميد الدكتور-بكيل محمد البراشي  (</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img1-fluid" src="{% static 'C:\Users\User\Desktop\tms\tms\static\assets\gggg.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">الرؤية</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">تعزيز السلامة المرورية والإرتقاء بالخدمات المرورية للجمهور لأفضل المستويات</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img1-fluid" src="{% static 'C:\Users\User\Desktop\tms\tms\static\assets\aa.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">الأهداف</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">ا- الحد من المخالفات والحوادث المرورية<br>
+                                ب- تنظيم وتسهيل حركة السير على الطرقات<br>
+                                ج- ترشيح الثقافة والوعي المروري لدى الجمهور<br>
+                                د- تعزيز السلامة المرورية على الطرقات<br> 
+                                ه- تسهيل الحصول على الخدمات المرورية وتوسيع نطاقها وتحسين جودتها<br>
+                            </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/logos/logo.png ' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">نبذة عنا</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">نسعى لتحقيق الامان في البلاد والتجنب من الحوادث والمخالفات المرورية</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                معاَ
+                                <br />
+                                لتحسين الحركة 
+                                <br />
+                                المرورية
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+
+{% endblock body %}
+{% block contact %}
+{% include 'contact.html' %}
+
+{% endblock contact %}
+
+

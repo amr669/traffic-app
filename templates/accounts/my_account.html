@@ -1,0 +1,57 @@
+{% extends 'b.html' %}
+{% load static %}
+{%block title%} My account {%endblock%}
+{% block stylesheet %}
+<style>
+  .vvmastheadd1{
+      margin-top: 10%;
+      margin-left: 30%;
+  }
+  .footer{
+      margin-top :13%;
+  }
+  .justify-content-center {
+    justify-content: center !important;
+    padding-top: 60px;
+  }
+</style>
+  <link rel="stylesheet" href="{% static 'css/s.css' %}">
+{% endblock stylesheet %}
+{% block breadcrumb %}
+
+    <li class="breadcrumb-item active">My account</li>
+{%endblock%}
+
+
+
+{% block head %}{% endblock head %}
+
+
+
+{% block body %}
+
+  <div class="container">
+    <h1 class="text-center logo p-4">
+     
+    </h1>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">edit profile</h3>
+            
+              <form method="post" novalidate>
+                {% csrf_token %}
+                {% include 'includes/form.html'%}
+                <button type="submit" class="btn btn-success">Save Changes</button>
+              </form>
+          </div>
+          <div class="card-footer text-muted text-center">
+             <a href="{%url 'login'%}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
