@@ -24,6 +24,9 @@ def click (request):
     return render(request,'click.html',c)
 
 # 
+
+# 
+
 def clic (request):
     cars = CAR.objects.all()
     for i in cars:
