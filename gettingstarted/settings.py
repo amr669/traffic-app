@@ -15,7 +15,7 @@ import os
 from django.test.runner import DiscoverRunner
 from pathlib import Path
 
-import requests
+# import requests
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
